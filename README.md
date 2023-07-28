@@ -18,4 +18,6 @@ npm run dev
 npm install "@builder.io/react"
 ```
 
-create "bcomponent.js" under pages
+Add a file "[[...page]].tsx", or bcomponent.js, under /page
+
+https://playground.builder.io/

@@ -1,4 +1,5 @@
 import { Builder, BuilderComponent, builder } from '@builder.io/react'
+import '../components/hero'
 
 builder.init("4e2fd74e646e4748b901efc919c33c72")
 // You control this page and how and where Builder renders
