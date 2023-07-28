@@ -1,4 +1,6 @@
-import { Builder, BuilderComponent, builder } from '@builder.io/react'
+import { builder, BuilderComponent } from '@builder.io/react'
+import { ChakraProvider } from '@chakra-ui/react'
+import {WHeader, WFooter} from '../components/wSections'
 import '../components/hero'
 
 builder.init("4e2fd74e646e4748b901efc919c33c72")
@@ -6,14 +8,14 @@ builder.init("4e2fd74e646e4748b901efc919c33c72")
 // https://www.builder.io/c/docs/integrating-builder-pages
 export default function Home({ builderJson }) {
   return (
-    <>
-
+    <ChakraProvider>
+    <WHeader />
       {/* Render your Builder.io content https://www.builder.io/c/docs/quickstart */}
       <main className="min-h-[70vh]">
         <BuilderComponent model="page" content={builderJson} />
       </main>
-
-    </>
+      <WFooter />
+    </ChakraProvider>
   )
 }
 
