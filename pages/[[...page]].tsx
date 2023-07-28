@@ -33,7 +33,7 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const pages = await builder.getAll('page', { fields: 'data.url' })
   return {
-    paths: pages.map(page => ({ params: { page: page.data.url } })),
+    paths: pages.map(page => ({ params: { page: page?.data?.url } })),
     fallback: true
   }
 }
