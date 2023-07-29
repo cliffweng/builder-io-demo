@@ -23,3 +23,11 @@ Add a file "[[...page]].tsx", or bcomponent.js, under /page
 https://playground.builder.io/
 
 https://vercel.com/dashboard
+
+https://auth0.com/
+
+https://next-auth.js.org/providers/auth0
+
+```
+npm install @auth0/auth0-react
+```
