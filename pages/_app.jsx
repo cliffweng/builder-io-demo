@@ -5,7 +5,7 @@ export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }) {
-    console.log("session",session)
+  // console.log("session",session)
   return (
     <SessionProvider session={session}>
         <WLayout>

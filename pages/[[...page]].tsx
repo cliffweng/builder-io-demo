@@ -1,8 +1,6 @@
 import { builder, BuilderComponent } from '@builder.io/react'
-import { ChakraProvider } from '@chakra-ui/react'
-import {WHeader, WFooter} from '../components/wSections'
+
 //import '../components/hero'
-import { SessionProvider } from "next-auth/react"
 
 builder.init("4e2fd74e646e4748b901efc919c33c72")
 // You control this page and how and where Builder renders
