@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import {Heading, Text, ButtonGroup, Button, Card, Stack, CardBody, CardFooter,Divider, Image } from '@chakra-ui/react'
-import { ChakraProvider } from '@chakra-ui/react'
 
 export default function App() {
   const [state, setState] = useState([]);
@@ -21,12 +20,11 @@ export default function App() {
   }, []);
 
   return (
-    <ChakraProvider>
-
+      <>
       {state.map((val) => (
         <OneCard name={val.name} lastname={val.lastname}/>
       ))}
-    </ChakraProvider>
+      </>
   );
 }
 export function OneCard(props) {

@@ -1,4 +1,4 @@
-import {Box, Breadcrumb,  BreadcrumbItem,  BreadcrumbLink} from '@chakra-ui/react';
+import {ChakraProvider, Box, Breadcrumb,  BreadcrumbItem,  BreadcrumbLink} from '@chakra-ui/react';
 
 export function WHeader() {
 
@@ -9,19 +9,13 @@ export function WHeader() {
                 <BreadcrumbLink href='/'>Home</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbItem>
-                <BreadcrumbLink href='/pg_templates'>Templates</BreadcrumbLink>
+                <BreadcrumbLink href='/forms'>Form</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbItem>
-                <BreadcrumbLink href='/pg_topics'>Special Topics</BreadcrumbLink>
+                <BreadcrumbLink href='/students'>Students</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbItem>
-                <BreadcrumbLink href='/pg_components'>Components</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbItem>
-                <BreadcrumbLink href='/pg_usecases'>Use Cases</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbItem>
-                <BreadcrumbLink href='/pg_databases'>Databases</BreadcrumbLink>
+                <BreadcrumbLink href='/about'>About</BreadcrumbLink>
             </BreadcrumbItem>
         </Breadcrumb>
     </Box>
@@ -29,5 +23,14 @@ export function WHeader() {
 }
 export function WFooter() {
 
-    return (<h1 className="text-4xl">Footer</h1>)
+    return (<Box bg='grey' w='100%' p={2} color='white'>Gabe Weng</Box>)
+}
+export function WLayout({children}) {
+    return (
+        <ChakraProvider>
+            <WHeader />
+            {children}
+          <WFooter />
+        </ChakraProvider>
+      )
 }
